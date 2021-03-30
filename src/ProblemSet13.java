@@ -1,11 +1,15 @@
 public class ProblemSet13 {
 
-    public boolean groupSum(int start, int[] numbers, int target) {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 2, 4, 8};
+        System.out.print(groupSum6(4, arr, 14));
+    }
 
+    public boolean groupSum(int start, int[] numbers, int target) {
         if (target == 0) {
             return true;
         }
-        if (start == numbers.length) {
+        if (start >= numbers.length) {
             return false;
         }
 
@@ -14,11 +18,9 @@ public class ProblemSet13 {
         }
 
         return groupSum(start+1, numbers, target);
-
     }
 
-    public boolean groupSum6(int start, int[] numbers, int target) {
-
+    public static boolean groupSum6(int start, int[] numbers, int target) {
         if (start == numbers.length) {
             if (target == 0) {
                 return true;
